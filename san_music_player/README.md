@@ -13,3 +13,5 @@ This sample takes inspiration from the following
     percent_indicator developed by diegoveloper
 
      UAMP
+
+This project is developed as a part of open source assignment by Group-29 
