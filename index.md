@@ -1,4 +1,4 @@
-## Welcome to Music Player App Pages
+## Music Player App
 
 A next generation app which plays all songs resides in phone memory in both Android & iOS platforms.
 
