@@ -2,9 +2,9 @@
 
 A next generation app which plays all songs resides in phone memory in both Android & iOS platforms.
 
-Author: Sankar Ganesh. S
+**Author**: Sankar Ganesh. S
 
-Collaborators: Sri Vishnu, Sujith, Syed, Sharad 
+**Collaborators**: Sri Vishnu, Sujith, Syed, Sharad 
 
 ### Flutter
 
