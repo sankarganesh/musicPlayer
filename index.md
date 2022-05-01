@@ -13,6 +13,10 @@ Flutter is a framework provided by the Google, which helps to build an app which
 ### Dart
 We have used dart programming language to develop the app.
 
+### Android Studio 
+
+Android Studio IDE was used for developing the code blocks.
+
 
 
 
