@@ -72,15 +72,25 @@ class AudioPlayerTask extends BackgroundAudioTask {
   @override
   Future<void> onPlay() => _audioPlayer.play();
 
-  @override
   Future<void> onPause() async {
     if (_audioPlayer.processingState == ProcessingState.loading ||
         _audioPlayer.playing) {
       _audioPlayer.pause();
       // Save the current player position in seconds.
       await prefs.setInt('position', _audioPlayer.position.inSeconds);
+      try {
+        if (_audioPlayer != null) {
+          if (_audioPlayer.processingState == ProcessingState.loading ||
+              _audioPlayer.playing) {
+            _audioPlayer.pause();
+            // Save the current player position in seconds.
+            await prefs.setInt('position', _audioPlayer.position.inSeconds);
+          }
+        }
+      } catch (exception) {
+        print(exception);
+      }
     }
-  }
 
   @override
   Future<void> onSkipToNext() => skip(1);
