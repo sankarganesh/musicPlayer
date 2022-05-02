@@ -78,7 +78,7 @@ class AudioPlayerTask extends BackgroundAudioTask {
         _audioPlayer.playing) {
       _audioPlayer.pause();
       // Save the current player position in seconds.
-      await prefs.setInt('position', _audioPlayer.position.inSeconds);
+      await prefs.setInt('current position', _audioPlayer.position.inSeconds);
     }
   }
 
