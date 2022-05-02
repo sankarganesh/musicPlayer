@@ -2,9 +2,9 @@ import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:san_music_player/data/musicCatalog.dart';
-import 'package:san_music_player/pojo/catalog.dart';
-import 'package:san_music_player/utils/parseDuration.dart';
+import 'package:san_music_player_san/data/musicCatalog.dart';
+import 'package:san_music_player_san/pojo/catalog.dart';
+import 'package:san_music_player_san/utils/parseDuration.dart';
 
 import 'home.dart';
 

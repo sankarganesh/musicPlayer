@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:san_music_player/views/CirclePainter.dart';
-import 'package:san_music_player/views/StaggeredAnimation.dart';
+import 'package:san_music_player_san/views/CirclePainter.dart';
+import 'package:san_music_player_san/views/StaggeredAnimation.dart';
 
 class AnimationView extends StatefulWidget {
   AnimationView({this.color});
@@ -49,7 +49,7 @@ class _AnimationScreenState extends State<AnimationView>
           child: CustomPaint(
               painter: CirclePainter(
                   color: widget.color,
-                  holeSize: _animation.holeSize.value * size.width))),
+                  circleSize: _animation.holeSize.value * size.width))),
       Positioned(
           top: _animation.dropPosition.value * size.height,
           left: size.width / 2 - _animation.dropSize.value / 2,

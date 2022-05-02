@@ -3,27 +3,27 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:san_music_player/Constants/IntegerConstants.dart';
-import 'package:san_music_player/Constants/StringConstants.dart';
+import 'package:san_music_player_san/Constants/StringConstants.dart';
+import 'package:san_music_player_san/properties/AssestPreperties.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final playerControl = MediaControl(
-  androidIcon: 'drawable/ic_action_play_arrow',
+  androidIcon: AssetProperties.playArrow,
   label: StringConstants.play,
   action: MediaAction.play,
 );
 final pausePlayerControl = MediaControl(
-  androidIcon: 'drawable/ic_action_pause',
+  androidIcon: AssetProperties.pauseArrow,
   label: StringConstants.pause,
   action: MediaAction.pause,
 );
 final skipToPreviousControl = MediaControl(
-  androidIcon: 'drawable/ic_action_skip_previous',
+  androidIcon: AssetProperties.skipPreviousArrow,
   label: StringConstants.skipPrevious,
   action: MediaAction.skipToPrevious,
 );
 final skipToNextControl = MediaControl(
-  androidIcon: 'drawable/ic_action_skip_next',
+  androidIcon: AssetProperties.skipNextArrow,
   label: StringConstants.skipNext,
   action: MediaAction.skipToNext,
 );
@@ -78,7 +78,7 @@ class AudioPlayerTask extends BackgroundAudioTask {
         _audioPlayer.playing) {
       _audioPlayer.pause();
       // Save the current player position in seconds.
-      await prefs.setInt('position', _audioPlayer.position.inSeconds);
+      await prefs.setInt('current position', _audioPlayer.position.inSeconds);
       try {
         if (_audioPlayer != null) {
           if (_audioPlayer.processingState == ProcessingState.loading ||

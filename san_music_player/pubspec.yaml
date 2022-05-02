@@ -1,5 +1,5 @@
-name: san_music_player
-description: A Music player App
+name: san_music_player_san
+description: A Music player App which plays music in high quality
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

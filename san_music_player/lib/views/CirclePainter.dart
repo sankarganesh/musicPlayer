@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class CirclePainter extends CustomPainter {
   CirclePainter({
     @required this.color,
-    @required this.holeSize,
+    @required this.circleSize,
   });
 
   Color color;
-  double holeSize;
+  double circleSize;
 
   @override
   void paint(Canvas canvas, Size size) {
-    double radius = holeSize / 2;
+    double radius = circleSize / 2;
     Rect rect = Rect.fromLTWH(0, 0, size.width, size.height);
     Rect outerCircleRect = Rect.fromCircle(
         center: Offset(size.width / 2, size.height / 2), radius: radius);

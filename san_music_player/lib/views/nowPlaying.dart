@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:san_music_player/pojo/catalog.dart';
-import 'package:san_music_player/utils/parseDuration.dart';
+import 'package:san_music_player_san/pojo/catalog.dart';
+import 'package:san_music_player_san/utils/parseDuration.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'catalogList.dart';
