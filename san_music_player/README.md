@@ -14,4 +14,4 @@ This sample takes inspiration from the following
 
      UAMP
 
-This project is developed as a part of open source assignment by Group-29 for OSSE Project
+This project is developed as a part of open source assignment by Group-29 for OSSE Project for BITS
