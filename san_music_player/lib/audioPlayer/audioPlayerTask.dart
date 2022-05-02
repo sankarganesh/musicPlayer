@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:san_music_player/Constants/IntegerConstants.dart';
 import 'package:san_music_player/Constants/StringConstants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -99,22 +100,26 @@ class AudioPlayerTask extends BackgroundAudioTask {
   Future<void> onSkipToPrevious() => skip(-1);
 
   Future<void> skip(int offset) async {
-    final newIndex = _queueIndex + offset;
-    if (!(newIndex >= 0 && newIndex < _queue.length)) return;
+    try {
+      final newIndex = _queueIndex + offset;
+      if (!(newIndex >= 0 && newIndex < _queue.length)) return;
 
-    await _audioPlayer.stop();
+      await _audioPlayer.stop();
 
-    _queueIndex = newIndex;
-    // Broadcast that we're skipping.
-    _setState(
-      state: offset == -1
-          ? AudioProcessingState.skippingToPrevious
-          : AudioProcessingState.skippingToNext,
-    );
+      _queueIndex = newIndex;
+      // Broadcast that we're skipping.
+      _setState(
+        state: offset == -1
+            ? AudioProcessingState.skippingToPrevious
+            : AudioProcessingState.skippingToNext,
+      );
 
-    await _audioPlayer.setUrl(_mediaItem.extras['source']);
-    onUpdateMediaItem(_mediaItem);
-    onPlay();
+      await _audioPlayer.setUrl(_mediaItem.extras['source']);
+      onUpdateMediaItem(_mediaItem);
+      onPlay();
+    } catch (exception) {
+      print(exception);
+    }
   }
 
   @override
@@ -137,7 +142,8 @@ class AudioPlayerTask extends BackgroundAudioTask {
         // using a click delay.
         clickDelay++;
         if (clickDelay == 1)
-          Future.delayed(Duration(milliseconds: 250), () {
+          Future.delayed(
+              Duration(milliseconds: IntegerConstants.waitingMilliSeconds), () {
             if (clickDelay == 1) playPause();
             if (clickDelay == 2) onSkipToNext();
             clickDelay = 0;
