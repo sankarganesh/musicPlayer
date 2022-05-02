@@ -90,22 +90,26 @@ class AudioPlayerTask extends BackgroundAudioTask {
   Future<void> onSkipToPrevious() => skip(-1);
 
   Future<void> skip(int offset) async {
-    final newIndex = _queueIndex + offset;
-    if (!(newIndex >= 0 && newIndex < _queue.length)) return;
+    try {
+      final newIndex = _queueIndex + offset;
+      if (!(newIndex >= 0 && newIndex < _queue.length)) return;
 
-    await _audioPlayer.stop();
+      await _audioPlayer.stop();
 
-    _queueIndex = newIndex;
-    // Broadcast that we're skipping.
-    _setState(
-      state: offset == -1
-          ? AudioProcessingState.skippingToPrevious
-          : AudioProcessingState.skippingToNext,
-    );
+      _queueIndex = newIndex;
+      // Broadcast that we're skipping.
+      _setState(
+        state: offset == -1
+            ? AudioProcessingState.skippingToPrevious
+            : AudioProcessingState.skippingToNext,
+      );
 
-    await _audioPlayer.setUrl(_mediaItem.extras['source']);
-    onUpdateMediaItem(_mediaItem);
-    onPlay();
+      await _audioPlayer.setUrl(_mediaItem.extras['source']);
+      onUpdateMediaItem(_mediaItem);
+      onPlay();
+    } catch (exception) {
+      print(exception);
+    }
   }
 
   @override
