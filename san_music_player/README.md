@@ -1,6 +1,6 @@
-# san_music_player
+# san music player
 
-A Next Gen Music player App
+A Next Gen Music player App which plays songs on both platforms ( iOS & Android)
 
 This sample takes inspiration from the following
 
