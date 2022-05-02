@@ -52,13 +52,17 @@ class SongDetailModel extends ChangeNotifier {
   }
 
   void addAll(List<MusicDataModel> items) {
-    _items.addAll(items);
+    if (_items.isNotEmpty) {
+      _items.addAll(items);
+    }
 
     notifyListeners();
   }
 
   void removeAll() {
-    _items.clear();
+    if (_items.isNotEmpty) {
+      _items.clear();
+    }
 
     notifyListeners();
   }

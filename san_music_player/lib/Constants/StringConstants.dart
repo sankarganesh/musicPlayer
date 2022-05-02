@@ -12,4 +12,6 @@ class StringConstants {
   static const String genre = "genre";
   static const String artUri = "artUri";
   static const String duration = "duration";
+  static const String songsYear = "2022";
+  static const String artistName = "James Blunt";
 }
