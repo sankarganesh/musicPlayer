@@ -1,5 +1,8 @@
 import 'package:san_music_player/Constants/IntegerConstants.dart';
 
+/**
+ * Class responsible for finding the songDuration
+ */
 String songDuration(Duration duration) {
   String seconds;
   final minutesValue =
