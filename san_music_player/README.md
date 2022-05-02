@@ -6,7 +6,7 @@ This sample takes inspiration from the following
 
     audio_service and just_audio plugin developed by Ryan Heise
 
-    The Flutter and Dart team.Cancel changes
+    The Flutter and Dart team.
 
     dio developed by FlutterChinaClub
 
