@@ -2,6 +2,11 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'musicCatalog.g.dart';
 
+/// Created by G29 as part of Open Source Assignment  on 02/05/2022.
+///  A class which holds attributes of a Song
+///  Some of the attributes are ID, Title, Album, ARTIST, Genre, Source, Image, Duration
+///  Class holds fromJSON method to parse the JSON code
+
 @JsonSerializable()
 class MusicDataModel {
   MusicDataModel({
