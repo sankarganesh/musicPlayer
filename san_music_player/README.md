@@ -1,6 +1,6 @@
 # san_music_player
 
-A Music player App
+A Next Gen Music player App
 
 This sample takes inspiration from the following
 
