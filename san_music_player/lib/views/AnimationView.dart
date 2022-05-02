@@ -49,7 +49,7 @@ class _AnimationScreenState extends State<AnimationView>
           child: CustomPaint(
               painter: CirclePainter(
                   color: widget.color,
-                  holeSize: _animation.holeSize.value * size.width))),
+                  circleSize: _animation.holeSize.value * size.width))),
       Positioned(
           top: _animation.dropPosition.value * size.height,
           left: size.width / 2 - _animation.dropSize.value / 2,
