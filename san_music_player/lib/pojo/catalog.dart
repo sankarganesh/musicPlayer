@@ -5,6 +5,7 @@ import 'package:dio_http_cache/dio_http_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:san_music_player_san/data/musicCatalog.dart';
 
+
 class SongDetailModel extends ChangeNotifier {
   final List<MusicDataModel> _items = [];
 
@@ -35,7 +36,7 @@ class SongDetailModel extends ChangeNotifier {
       ),
     );
 
-    if (response.statusCode == 200) {
+    if (response.statusCode == IntegerConstants.responseCode) {
       final data = response.data['music'] as List<dynamic>;
       final List<MusicDataModel> result =
           data.map((model) => MusicDataModel.fromJson(model)).toList();
@@ -52,9 +53,7 @@ class SongDetailModel extends ChangeNotifier {
   }
 
   void addAll(List<MusicDataModel> items) {
-    if (_items.isNotEmpty) {
-      _items.addAll(items);
-    }
+    _items.addAll(items);
 
     notifyListeners();
   }

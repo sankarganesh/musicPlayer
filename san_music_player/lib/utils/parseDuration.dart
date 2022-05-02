@@ -1,17 +1,14 @@
 import 'package:san_music_player_san/Constants/IntegerConstants.dart';
 
-/**
- * Class responsible for finding the songDuration
- */
 String songDuration(Duration duration) {
   String seconds;
-  final minutesValue =
-      duration.inMinutes.remainder(IntegerConstants.totalSecond);
-  final sec = duration.inSeconds.remainder(IntegerConstants.totalSecond);
-  if (sec < IntegerConstants.sec) {
-    seconds = '0$sec';
+  final minutes = duration.inMinutes.remainder(IntegerConstants.totalSecond);
+  final num secondValue =
+      duration.inSeconds.remainder(IntegerConstants.totalSecond);
+  if (secondValue < IntegerConstants.sec) {
+    seconds = '0$secondValue';
   } else {
-    seconds = '$sec';
+    seconds = '$secondValue';
   }
-  return '$minutesValue:$seconds';
+  return '$minutes:$seconds';
 }

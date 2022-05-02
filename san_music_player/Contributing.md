@@ -12,6 +12,6 @@
 
 - If your patch is not getting reviewed or you need a specific person to review
   it, you can @-reply a reviewer asking for a review in the pull request or a
-  comment.
+  comments.
 
-- Add tests relevant to the fixed bug or new feature.  
+- Add tests relevant to the fixed bug or new features.  
