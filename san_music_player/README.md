@@ -1,6 +1,6 @@
-# san_music_player
+# san music player
 
-A Music player App
+A Next Gen Music player App which plays songs on both platforms ( iOS & Android)
 
 This sample takes inspiration from the following
 
@@ -14,4 +14,4 @@ This sample takes inspiration from the following
 
      UAMP
 
-This project is developed as a part of open source assignment by Group-29 
+This project is developed as a part of open source assignment by Group-29 for OSSE Project for BITS

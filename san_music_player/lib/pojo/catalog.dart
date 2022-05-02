@@ -59,7 +59,9 @@ class SongDetailModel extends ChangeNotifier {
   }
 
   void removeAll() {
-    _items.clear();
+    if (_items.isNotEmpty) {
+      _items.clear();
+    }
 
     notifyListeners();
   }
