@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:san_music_player/Constants/IntegerConstants.dart';
 import 'package:san_music_player/Constants/StringConstants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -127,7 +128,8 @@ class AudioPlayerTask extends BackgroundAudioTask {
         // using a click delay.
         clickDelay++;
         if (clickDelay == 1)
-          Future.delayed(Duration(milliseconds: 250), () {
+          Future.delayed(
+              Duration(milliseconds: IntegerConstants.waitingMilliSeconds), () {
             if (clickDelay == 1) playPause();
             if (clickDelay == 2) onSkipToNext();
             clickDelay = 0;
