@@ -1,9 +1,9 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:san_music_player/pojo/catalog.dart';
-import 'package:san_music_player/views/AnimationView.dart';
-import 'package:san_music_player/views/home.dart';
+import 'package:san_music_player_san/pojo/catalog.dart';
+import 'package:san_music_player_san/views/AnimationView.dart';
+import 'package:san_music_player_san/views/home.dart';
 
 void main() {
   runApp(

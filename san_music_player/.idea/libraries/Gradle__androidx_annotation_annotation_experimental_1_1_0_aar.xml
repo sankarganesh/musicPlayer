@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.annotation:annotation-experimental:1.1.0@aar" type="AndroidModuleLibraryType">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/256716dd40e430d3d4a5c6d31f58034d/jetified-annotation-experimental-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/256716dd40e430d3d4a5c6d31f58034d/jetified-annotation-experimental-1.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

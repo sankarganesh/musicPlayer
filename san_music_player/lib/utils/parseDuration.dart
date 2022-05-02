@@ -1,4 +1,4 @@
-import 'package:san_music_player/Constants/IntegerConstants.dart';
+import 'package:san_music_player_san/Constants/IntegerConstants.dart';
 
 /**
  * Class responsible for finding the songDuration

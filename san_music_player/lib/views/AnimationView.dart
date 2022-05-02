@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:san_music_player/views/CirclePainter.dart';
-import 'package:san_music_player/views/StaggeredAnimation.dart';
+import 'package:san_music_player_san/views/CirclePainter.dart';
+import 'package:san_music_player_san/views/StaggeredAnimation.dart';
 
 class AnimationView extends StatefulWidget {
   AnimationView({this.color});

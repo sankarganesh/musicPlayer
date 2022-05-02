@@ -3,7 +3,7 @@ import 'dart:collection';
 import 'package:dio/dio.dart';
 import 'package:dio_http_cache/dio_http_cache.dart';
 import 'package:flutter/material.dart';
-import 'package:san_music_player/data/musicCatalog.dart';
+import 'package:san_music_player_san/data/musicCatalog.dart';
 
 class SongDetailModel extends ChangeNotifier {
   final List<MusicDataModel> _items = [];
